@@ -20,7 +20,7 @@ footer {
   font-weight: 600;
   font-size: 40px;
   line-height: 1.2;
-  margin: 0 0 24px 0;
+  margin: 0 0 0 0 ;
 }
 
 img {
@@ -29,6 +29,10 @@ img {
 
 nav a {
   margin-left: 32px;
+}
+
+nav h1 {
+  margin-bottom: 0;
 }
 
 header {
@@ -43,7 +47,7 @@ a {
   transition: color 300ms;
 }
 
-a:hover {
+a:hover,a.selected {
   color: #f4bcbb;
 }
 
@@ -97,6 +101,10 @@ section.about div.headshot {
 
 section.about div.description {
   grid-column: 8 / span 5;
+}
+
+section.contact div.form{
+  grid-column: 4 / span 6;
 }
 
 footer {
