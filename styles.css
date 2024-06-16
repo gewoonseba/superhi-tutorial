@@ -7,7 +7,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   padding: 0;
-  background-color: #111118;
+  background: linear-gradient(0deg, #111118 59.71%, #02182A 100%);
   color: #fff;
   margin: 80px auto 48px auto;
   width: 1120px;
@@ -24,12 +24,27 @@ footer {
   margin: 0 0 0 0;
 }
 
-img {
+h2 span.highlight-pink {
+  color: #f4bcbb;
+}
+
+h2 span.highlight-purple {
+  color: rebeccapurple;
+}
+
+img,
+video {
   max-width: 100%;
+  border-radius: 16px;
+}
+
+p {
+  margin: 0px;
 }
 
 nav a {
   margin-left: 32px;
+  border-bottom: 2px solid transparent;
 }
 
 nav h1 {
@@ -45,12 +60,13 @@ header {
 a {
   color: #fff;
   text-decoration: none;
-  transition: color 300ms;
+  transition: color 300ms, border-bottom 300ms;
 }
 
-a:hover,
-a.selected {
+nav a:hover,
+nav a.selected {
   color: #f4bcbb;
+  border-bottom: 2px solid #f4bcbb;
 }
 
 section {
@@ -109,6 +125,30 @@ section.contact div.form {
   grid-column: 4 / span 6;
 }
 
+section.project-alt-2 img {
+  grid-column: 1 / span 12;
+}
+
+section.project-alt-2 h3 {
+  grid-column: 1 / span 6;
+}
+
+section.project-alt-2 div {
+  grid-column: 7 / span 6;
+}
+
+section.grid-layout div {
+  grid-column: span 6;
+}
+
+section.grid-layout h3 {
+  margin: 16px 0px 8px 0px;
+}
+
+section.grid-layout p {
+  text-align: justify;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -159,23 +199,23 @@ footer a {
     grid-column: 1 / span 2;
     text-align: center;
   }
-  
+
   section.project div.artwork img {
     max-height: 480px;
   }
-  
+
   section.project div.description {
     grid-column: 1 / span 2;
   }
-  
+
   section.project-alt div.artwork {
     grid-column: 1 / span 2;
   }
-  
+
   section.project-alt div.description {
     grid-column: 1 / span 2;
   }
-  
+
   section.about div.headshot {
     grid-column: 1 / span 2;
   }
@@ -183,17 +223,16 @@ footer a {
   section.about div.headshot img {
     max-height: 480px;
   }
-  
+
   section.about div.description {
     grid-column: 1 / span 2;
   }
-  
+
   section.contact div.form {
     grid-column: 1 / span 2;
   }
 
   @media (max-width: 560px) {
-
     body {
       width: auto;
       margin: 32px;
@@ -214,10 +253,5 @@ footer a {
     section {
       margin: 56px 0 56px 0;
     }
-
-    p {
-      margin: 0px;
-    }
-    
   }
 }
